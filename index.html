@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Petacrate</title>
+  <!-- <meta content="" name="description" />
+  <meta content="" name="keywords" /> -->
+  <meta name="title" content="Petacrate Technologies Pvt Ltd - Mobile Apps, Web Apps, Backend, Design, and SEO Services">
+  <meta name="description" content="Petacrate Technologies Pvt Ltd offers comprehensive solutions including mobile app development, web app development, backend development, design services, and SEO services to help your business thrive in the digital landscape.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.petacrate.com/">
+  <meta property="og:title" content="Petacrate Technologies Pvt Ltd - Mobile Apps, Web Apps, Backend, Design, and SEO Services">
+  <meta property="og:description" content="Petacrate Technologies Pvt Ltd offers comprehensive solutions including mobile app development, web app development, backend development, design services, and SEO services to help your business thrive in the digital landscape.">
+  <meta property="og:image" content="https://www.petacrate.com/og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.petacrate.com/">
+  <meta property="twitter:title" content="Petacrate Technologies Pvt Ltd - Mobile Apps, Web Apps, Backend, Design, and SEO Services">
+  <meta property="twitter:description" content="Petacrate Technologies Pvt Ltd offers comprehensive solutions including mobile app development, web app development, backend development, design services, and SEO services to help your business thrive in the digital landscape.">
+  <meta property="twitter:image" content="https://www.petacrate.com/twitter-image.jpg">
+
+  <!-- Additional Meta Tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="Mobile App Development, Web App Development, Backend Development, Design Services, SEO Services, Petacrate Technologies Pvt Ltd">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <!-- Email service -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        emailjs.init("service_jv7y9vc"); // Replace with your EmailJS user ID
+    })();
+</script> -->
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init({
+        publicKey: "K4K1YmjNeUb3loNTI",
+      });
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          document.querySelector(".loading").classList.add("d-block");
+          document
+            .querySelector(".error-message")
+            .classList.remove("d-block");
+          document.querySelector(".sent-message").classList.remove("d-block");
+          // these IDs from the previous steps
+          emailjs.sendForm("service_jv7y9vc", "template_bww4q09", this).then(
+            () => {
+              document.querySelector(".loading").classList.remove("d-block");
+              document
+                .querySelector(".sent-message")
+                .classList.add("d-block");
+              setTimeout(function () {
+                document
+                  .querySelector(".sent-message")
+                  .classList.remove("d-block");
+              }, 2000);
+              document.getElementById("contact-form").reset();
+              document.reset();
+            },
+            (error) => {
+              displayError(thisForm, error);
+            }
+          );
+        });
+    };
+    function displayError(thisForm, error) {
+      document.querySelector(".loading").classList.remove("d-block");
+      document.querySelector(".error-message").innerHTML = error;
+      document.querySelector(".error-message").classList.add("d-block");
+    }
+  </script>
+
+  <!-- End of Email service -->
+  <!-- =======================================================
+  * Template Name: Impact
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Updated: Jun 06 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+  <header id="header" class="header fixed-top">
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a
+              href="mailto:info@petacrate.com">info@petacrate.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 91778 25388</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="assets/img/petalogo_fullwhite.png" alt="" />
+          <!-- <h1 class="sitename">Petacrate</h1> -->
+          <!-- <span>.</span> -->
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li>
+              <a href="#hero" class="active">Home<br /></a>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#team">Team</a></li>
+            <!-- <li><a href="blog.html">Blog</a></li> -->
+            <!--            
+            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li>
+            -->
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-5 justify-content-between">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h2>
+              <span>Welcome to </span><span class="accent">Petacrate</span>
+            </h2>
+            <p>
+              Where innovation meets expertise. We design, develop, and
+              deliver exceptional mobile and web applications that drive real
+              results.
+            </p>
+            <div class="d-flex">
+              <a href="#contact" class="btn-get-started">Get Started</a>
+              <a href="https://youtu.be/TJmMSqacDm0"
+                class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch
+                  Video</span></a>
+            </div>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2">
+            <img src="assets/img/workspace.png" class="img-fluid" alt="Illustration by Icons 8 from Ouch!" />
+          </div>
+        </div>
+      </div>
+
+      <div class="icon-boxes position-relative" data-aos="fade-up" data-aos-delay="200">
+        <div class="container position-relative">
+          <div class="row gy-4 mt-5">
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-phone"></i></div>
+                <h4 class="title">
+                  <a href="" class="stretched-link">Mobile Apps</a>
+                </h4>
+              </div>
+            </div>
+            <!--End Icon Box -->
+
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-globe"></i></div>
+                <h4 class="title">
+                  <a href="" class="stretched-link">Web Apps</a>
+                </h4>
+              </div>
+            </div>
+            <!--End Icon Box -->
+
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-database"></i></div>
+                <h4 class="title">
+                  <a href="" class="stretched-link">Back-end</a>
+                </h4>
+              </div>
+            </div>
+            <!--End Icon Box -->
+
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-brush"></i></div>
+                <h4 class="title">
+                  <a href="" class="stretched-link">Design</a>
+                </h4>
+              </div>
+            </div>
+            <!--End Icon Box -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About Us<br /></h2>
+        <p>We craft exceptional mobile and web experiences</p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3>
+              We design and develop cutting-edge mobile and web apps to propel
+              your business
+            </h3>
+            <img src="assets/img/chart.png" class="img-fluid rounded-4 mb-4" alt="" />
+            <p>
+              Unleash the potential of your business with Petacrate. We're a
+              passionate software development team specializing in crafting
+              user-friendly and powerful mobile and web applications. We
+              seamlessly integrate with your existing systems, creating tools
+              that boost engagement and streamline operations.
+            </p>
+            <p>
+              Petacrate prioritizes collaboration. We work hand-in-hand with
+              you throughout the entire process, from initial concept to final
+              launch. Clear communication and transparent development ensure
+              your vision remains the driving force. Expect a beautiful,
+              functional application that delivers real results. Partner with
+              Petacrate and elevate your business.
+            </p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                At Petacrate, we're a passionate team of software developers
+                driven by a shared mission: to empower businesses with the
+                transformative power of mobile and web applications. We bridge
+                the gap between your ideas and reality, crafting user-centric
+                applications that not only look beautiful but deliver tangible
+                results.
+              </p>
+              <ul>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span><b>Expertise & Innovation:</b> We combine cutting-edge
+                    development practices with deep industry knowledge to
+                    create powerful solutions.</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span><b>Collaborative Spirit:</b> We believe in close
+                    partnerships. We work hand-in-hand with you throughout the
+                    entire process, ensuring clear communication and
+                    prioritizing your vision.</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span><b>Results-Oriented:</b> We're not just building apps,
+                    we're building success. Our focus is on developing
+                    applications that drive user engagement, streamline
+                    operations, and ultimately, propel your business
+                    forward.</span>
+                </li>
+              </ul>
+              <!-- <p>
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+              </p> -->
+
+              <div class="position-relative mt-4">
+                <img src="assets/img/solving.png" class="img-fluid rounded-4" alt="" />
+                <a href="https://youtu.be/TJmMSqacDm0" class="glightbox play-btn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /About Section -->
+
+    <!-- Clients Section -->
+    <!-- <section id="clients" class="clients section">
+      <div class="container">
+        <div class="swiper">
+          <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 40
+                  },
+                  "480": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 60
+                  },
+                  "640": {
+                    "slidesPerView": 4,
+                    "spaceBetween": 80
+                  },
+                  "992": {
+                    "slidesPerView": 6,
+                    "spaceBetween": 120
+                  }
+                }
+              }
+            </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-1.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-2.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-3.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-4.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-5.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-6.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-7.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-8.png" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- /Clients Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-5">
+            <img src="assets/img/people_team.png" alt="" class="img-fluid" />
+          </div>
+
+          <div class="col-lg-7">
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <div class="stats-item d-flex">
+                  <i class="bi bi-emoji-smile flex-shrink-0"></i>
+                  <div>
+                    <span data-purecounter-start="0" data-purecounter-end="54" data-purecounter-duration="1"
+                      class="purecounter"></span>
+                    <p>
+                      <strong>Happy Clients</strong>
+                      <span>consequuntur quae</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Stats Item -->
+
+              <div class="col-lg-6">
+                <div class="stats-item d-flex">
+                  <i class="bi bi-journal-richtext flex-shrink-0"></i>
+                  <div>
+                    <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1"
+                      class="purecounter"></span>
+                    <p>
+                      <strong>Projects</strong>
+                      <span>adipisci atque cum quia aut</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Stats Item -->
+
+              <div class="col-lg-6">
+                <div class="stats-item d-flex">
+                  <i class="bi bi-headset flex-shrink-0"></i>
+                  <div>
+                    <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
+                      class="purecounter"></span>
+                    <p>
+                      <strong>Hours Of Support</strong>
+                      <span>aut commodi quaerat</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Stats Item -->
+
+              <div class="col-lg-6">
+                <div class="stats-item d-flex">
+                  <i class="bi bi-people flex-shrink-0"></i>
+                  <div>
+                    <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
+                      class="purecounter"></span>
+                    <p>
+                      <strong>Hard Workers</strong>
+                      <span>rerum asperiores dolor</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Stats Item -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Stats Section -->
+
+    <!-- Call To Action Section -->
+    <!-- <section id="call-to-action" class="call-to-action section">
+
+      <div class="container">
+        <img src="assets/img/cta-bg.jpg" alt="">
+        <div class="content row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+              <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+              <h3>Call To Action</h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <a class="cta-btn" href="#">Call To Action</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section> -->
+    <!-- /Call To Action Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Services</h2>
+        <p>
+          Comprehensive Digital Solutions for Web, Mobile, and Backend
+          Development.
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-phone"></i>
+              </div>
+              <h3>Mobile Development</h3>
+              <p>
+                We deliver customized, high-performance Android and iOS
+                applications with seamless user experiences and cutting-edge
+                design.
+              </p>
+              <a href="#" class="readmore stretched-link">Read more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-globe"></i>
+              </div>
+              <h3>Web Developement</h3>
+              <p>
+                We create dynamic, responsive web applications tailored to
+                your business needs with innovative design and robust
+                functionality.
+              </p>
+              <a href="#" class="readmore stretched-link">Read more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-database"></i>
+              </div>
+              <h3>Back-end</h3>
+              <p>
+                We provide scalable and secure backend solutions that power
+                your applications with reliability and efficiency.
+              </p>
+              <a href="#" class="readmore stretched-link">Read more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-brush"></i>
+              </div>
+              <h3>Design</h3>
+              <p>
+                We deliver innovative and user-centric designs that enhance
+                the visual appeal and usability of your digital products.
+              </p>
+              <a href="#" class="readmore stretched-link">Read more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-cloud-arrow-up"></i>
+              </div>
+              <h3>DevOps</h3>
+              <p>
+                We offer comprehensive DevOps services to streamline your
+                development process, ensuring faster delivery and reliable
+                infrastructure management.
+              </p>
+              <a href="#" class="readmore stretched-link">Read more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-search-heart"></i>
+              </div>
+              <h3>SEO</h3>
+              <p>
+                We optimize your online presence with effective SEO strategies
+                to enhance visibility and drive organic traffic to your
+                website.
+              </p>
+              <a href="#" class="readmore stretched-link">Read more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- End Service Item -->
+        </div>
+      </div>
+    </section>
+    <!-- /Services Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>
+          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+          consectetur velit
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper">
+          <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 40
+                  },
+                  "1200": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 10
+                  }
+                }
+              }
+            </script>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/placeholder.jpg" class="testimonial-img" alt="" />
+                <h3>Chetan</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Petacrate Technologies Pvt Ltd developed a seamless app that our customers love. Their professionalism and commitment to quality are outstanding.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/placeholder.jpg" class="testimonial-img" alt="" />
+                <h3>Naresh</h3>
+                <h4>CMO</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Petacrate Technologies Pvt Ltd significantly boosted our online sales with their exceptional web development services. Highly recommend them!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/placeholder.jpg" class="testimonial-img" alt="" />
+                <h3>Prasad</h3>
+                <h4>Founder and CEO</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Petacrate Technologies Pvt Ltd created a robust backend solution that has been instrumental in our success. Their technical skills are truly impressive.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/placeholder.jpg" class="testimonial-img" alt="" />
+                <h3>Bharath Kumar</h3>
+                <h4>Manager</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Petacrate Technologies Pvt Ltd's design team captured our vision perfectly, creating stunning visuals that set us apart from the competition.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/placeholder.jpg" class="testimonial-img" alt="" />
+                <h3>Kiran</h3>
+                <h4>Entrepreneur</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The SEO services from Petacrate Technologies Pvt Ltd transformed our online presence, dramatically increasing our website traffic and search rankings.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- /Testimonials Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>
+          Showcase our diverse range of successful projects that highlight our
+          expertise in web and mobile development, backend solutions, and
+          innovative design.
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">Mobile</li>
+            <li data-filter=".filter-product">Web</li>
+            <!-- <li data-filter=".filter-branding">Design</li>
+            <li data-filter=".filter-books">SEO</li> -->
+          </ul>
+          <!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/app1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                    src="assets/img/portfolio/app1.jpg" class="img-fluid" alt="" /></a>
+                <div class="portfolio-info">
+                  <h4>
+                    <a href="#" title="More Details">ODCme</a>
+                  </h4>
+                  <p>
+                    ODCme(On Demand Casual - Made Easy!) User app built on
+                    flutter
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/product1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                    src="assets/img/portfolio/product1.jpg" class="img-fluid" alt="" /></a>
+                <div class="portfolio-info">
+                  <h4>
+                    <a href="#" title="More Details">ODCme Web</a>
+                  </h4>
+                  <p>
+                    ODCme admin Web app(On Demand Casual - Made Easy!) admin
+                    web app built on flutter
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/branding-1.jpg" data-gallery="portfolio-gallery-app"
+                  class="glightbox"><img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="" /></a>
+                <div class="portfolio-info">
+                  <h4>
+                    <a href="portfolio-details.html" title="More Details">Design</a>
+                  </h4>
+                  <p>Design</p>
+                </div>
+              </div>
+            </div> -->
+            <!-- End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/books-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                    src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="" /></a>
+                <div class="portfolio-info">
+                  <h4>
+                    <a href="portfolio-details.html" title="More Details">SEO</a>
+                  </h4>
+                  <p>SEO</p>
+                </div>
+              </div>
+            </div> -->
+            <!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/app2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                    src="assets/img/portfolio/app2.jpg" class="img-fluid" alt="" /></a>
+                <div class="portfolio-info">
+                  <h4>
+                    <a href="#" title="More Details">ODCme Business</a>
+                  </h4>
+                  <p>
+                    ODCme Business (On Demand Casual - Made Easy!) for
+                    Businesses app built on flutter
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/product2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                    src="assets/img/portfolio/product2.jpg" class="img-fluid" alt="" /></a>
+                <div class="portfolio-info">
+                  <h4>
+                    <a href="#" title="More Details">ODCme Website</a>
+                  </h4>
+                  <p>ODCme Business (On Demand Casual - Made Easy!) for
+                    website built on html</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/branding-2.jpg" data-gallery="portfolio-gallery-app"
+                  class="glightbox"><img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="" /></a>
+                <div class="portfolio-info">
+                  <h4>
+                    <a href="portfolio-details.html" title="More Details">Design 2</a>
+                  </h4>
+                  <p>Design 2</p>
+                </div>
+              </div>
+            </div> -->
+            <!-- End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/books-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                    src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="" /></a>
+                <div class="portfolio-info">
+                  <h4>
+                    <a href="portfolio-details.html" title="More Details">SEO 2</a>
+                  </h4>
+                  <p>SEO 2</p>
+                </div>
+              </div>
+            </div> -->
+            <!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/app1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                    src="assets/img/portfolio/app1.jpg" class="img-fluid" alt="" /></a>
+                <div class="portfolio-info">
+                  <h4>
+                    <a href="#" title="More Details">ODCme Referral</a>
+                  </h4>
+                  <p>
+                    ODCme Referral (On Demand Casual - Made Easy!) Referral
+                    app built on flutter
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/product-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                    src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="" /></a>
+                <div class="portfolio-info">
+                  <h4>
+                    <a href="portfolio-details.html" title="More Details">ODCme Web 3</a>
+                  </h4>
+                  <p>ODCme Web 3</p>
+                </div>
+              </div>
+            </div> -->
+            <!-- End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/branding-3.jpg" data-gallery="portfolio-gallery-app"
+                  class="glightbox"><img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="" /></a>
+                <div class="portfolio-info">
+                  <h4>
+                    <a href="portfolio-details.html" title="More Details">Design 3</a>
+                  </h4>
+                  <p>Design 3</p>
+                </div>
+              </div>
+            </div> -->
+            <!-- End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/books-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                    src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="" /></a>
+                <div class="portfolio-info">
+                  <h4>
+                    <a href="portfolio-details.html" title="More Details">SEO 3</a>
+                  </h4>
+                  <p>SEO 3</p>
+                </div>
+              </div>
+            </div> -->
+            <!-- End Portfolio Item -->
+          </div>
+          <!-- End Portfolio Container -->
+        </div>
+      </div>
+    </section>
+    <!-- /Portfolio Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Team</h2>
+        <p>
+          Our team excels in web and mobile development, backend engineering,
+          and creative design.
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="assets/img/team/team-1.png" class="img-fluid" alt="Illustration by Icons 8 from Ouch!" />
+              <h4>Abhinash Pallepogu</h4>
+              <span>Mobile Development</span>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- End Team Member -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="assets/img/team/team-2.png" class="img-fluid" alt="Illustration by Icons 8 from Ouch!" />
+              <h4>Vamshidhar</h4>
+              <span>Marketing</span>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- End Team Member -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img src="assets/img/team/team-3.png" class="img-fluid" alt="Illustration by Icons 8 from Ouch!" />
+              <h4>Gaurav Srinivas</h4>
+              <span>Designer</span>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- End Team Member -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <img src="assets/img/team/team-4.png" class="img-fluid" alt="Illustration by Icons 8 from Ouch!" />
+              <h4>Jay Yadav</h4>
+              <span>Back-end</span>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- End Team Member -->
+        </div>
+      </div>
+    </section>
+    <!-- /Team Section -->
+
+    <!-- Pricing Section -->
+    <!-- <section id="pricing" class="pricing section">-->
+
+      <!-- Section Title -->
+    <!--  <div class="container section-title" data-aos="fade-up">
+        <h2>Pricing</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>-->
+    <!-- End Section Title -->
+
+    <!--<div class="container" data-aos="zoom-in" data-aos-delay="100">
+
+        <div class="row g-4">
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>Free Plan</h3>
+              <div class="icon">
+                <i class="bi bi-box"></i>
+              </div>
+              <h4><sup>$</sup>0<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul>
+              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div>
+        -->
+    <!-- End Pricing Item -->
+
+    <!-- <div class="col-lg-4">
+            <div class="pricing-item featured">
+              <h3>Business Plan</h3>
+              <div class="icon">
+                <i class="bi bi-rocket"></i>
+              </div>
+
+              <h4><sup>$</sup>29<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul>
+              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div>-->
+    <!-- End Pricing Item -->
+
+    <!-- <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>Developer Plan</h3>
+              <div class="icon">
+                <i class="bi bi-send"></i>
+              </div>
+              <h4><sup>$</sup>49<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul>
+              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div>-->
+    <!-- End Pricing Item -->
+
+    <!-- </div>
+
+      </div>
+
+    </section> -->
+
+    <!-- /Pricing Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="content px-xl-5">
+              <h3>
+                <span>Frequently Asked </span><strong>Questions</strong>
+              </h3>
+              <p>
+                Find answers to common questions about our company, services, and how we work. Learn how to get in touch with our team, the industries we specialize in, and more.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <div class="faq-container">
+              <div class="faq-item faq-active">
+                <h3>
+                  <span class="num">1.</span>
+                  <span>What services does your company offer?</span>
+                </h3>
+                <div class="faq-content">
+                  <p>
+                    We offer a wide range of services, including mobile app development, web app development, backend development, design services, and SEO services.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>
+                  <span class="num">2.</span>
+                  <span>How can I get in touch with your team?</span>
+                </h3>
+                <div class="faq-content">
+                  <p>
+                    You can contact us via our website's contact form, email us at info@petacrate.com, or call us at +91-9177825388.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>
+                  <span class="num">3.</span>
+                  <span>What industries do you specialize in?</span>
+                </h3>
+                <div class="faq-content">
+                  <p>
+                    We have experience working across various industries, including healthcare, education, e-commerce, finance, and more.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>
+                  <span class="num">4.</span>
+                  <span>What platforms do you develop mobile apps for?</span>
+                </h3>
+                <div class="faq-content">
+                  <p>
+                    We primarily use Flutter for mobile app development, but we are also proficient in other technologies as per project requirements.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+              <div class="faq-item">
+                <h3>
+                  <span class="num">5.</span>
+                  <span>What technologies do you use for web app development?</span>
+                </h3>
+                <div class="faq-content">
+                  <p>
+                    We use various technologies including React, Angular, Vue.js for frontend development, and Node.js, PHP, Python for backend development.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+              <div class="faq-item">
+                <h3>
+                  <span class="num">6.</span>
+                  <span>What backend technologies do you specialize in?</span>
+                </h3>
+                <div class="faq-content">
+                  <p>
+                    We specialize in Node.js, PHP, Python, and other backend technologies as needed.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+              <div class="faq-item">
+                <h3>
+                  <span class="num">7.</span>
+                  <span>What design services do you offer?</span>
+                </h3>
+                <div class="faq-content">
+                  <p>
+                    We offer UI/UX design, graphic design, logo design, and branding services.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+              <div class="faq-item">
+                <h3>
+                  <span class="num">8.</span>
+                  <span>What is your development process?</span>
+                </h3>
+                <div class="faq-content">
+                  <p>
+                    Our development process includes requirement gathering, planning, designing, development, testing, deployment, and maintenance.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+              <div class="faq-item">
+                <h3>
+                  <span class="num">9.</span>
+                  <span>Do you offer post-launch support?</span>
+                </h3>
+                <div class="faq-content">
+                  <p>
+                    Yes, we offer post-launch support and maintenance services to ensure your project runs smoothly after deployment.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Faq Section -->
+
+    <!-- Recent Posts Section -->
+    <!-- <section id="recent-posts" class="recent-posts section"> -->
+
+    <!-- Section Title -->
+    <!---  <div class="container section-title" data-aos="fade-up">
+        <h2>Recent Blog Posts</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div> -->
+
+    <!-- End Section Title -->
+
+    <!-- <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <article>
+
+              <div class="post-img">
+                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <p class="post-category">Politics</p>
+
+              <h2 class="title">
+                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src="assets/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Maria Doe</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01">Jan 1, 2022</time>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+          </div>--><!-- End post list item -->
+
+    <!--<div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <article>
+
+              <div class="post-img">
+                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
+              </div>
+
+              <p class="post-category">Sports</p>
+
+              <h2 class="title">
+                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src="assets/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Allisa Mayer</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01">Jun 5, 2022</time>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+          </div>--><!-- End post list item -->
+
+    <!--<div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <article>
+
+              <div class="post-img">
+                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
+              </div>
+
+              <p class="post-category">Entertainment</p>
+
+              <h2 class="title">
+                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src="assets/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Mark Dower</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01">Jun 22, 2022</time>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+          </div>--><!-- End post list item -->
+
+    <!--</div>-->
+    <!-- End recent posts list -->
+
+    <!--- </div>
+
+    </section>-->
+
+    <!-- /Recent Posts Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>
+          Contact us for expert help in web and mobile development, backend
+          solutions, and design partnerships.
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gx-lg-0 gy-4">
+          <div class="col-lg-4">
+            <div class="info-container d-flex flex-column align-items-center justify-content-center">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>Pno: 40A, Sri Ram Nagar, Hyderabad, TN 500084</p>
+                </div>
+              </div>
+              <!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>+91 91778 25388</p>
+                </div>
+              </div>
+              <!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>info@petacrate.com</p>
+                </div>
+              </div>
+              <!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                <i class="bi bi-clock flex-shrink-0"></i>
+                <div>
+                  <h3>Open Hours:</h3>
+                  <p>Mon-Sat: 9AM - 6PM</p>
+                </div>
+              </div>
+              <!-- End Info Item -->
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <form id="contact-form" method="post" class="php-email-form" data-aos="fade" data-aos-delay="100">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="" />
+                </div>
+
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="" />
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="" />
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="8" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    Your message has been sent. Thank you!
+                  </div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- End Contact Form -->
+        </div>
+      </div>
+    </section>
+    <!-- /Contact Section -->
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/petalogo_fullwhite.png" alt="" />
+            <!-- <span class="sitename">Petacrate</span> -->
+          </a>
+          <p>
+            Where innovation meets expertise. We design, develop, and deliver
+            exceptional mobile and web applications that drive real results.
+          </p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#contact">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#services">Mobile Development</a></li>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Back-end</a></li>
+            <li><a href="#services">Design</a></li>
+            <li><a href="#services">DevOps</a></li>
+            <li><a href="#services">SEO</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>Pno: 40A, Sri Ram Nagar,</p>
+          <p>Hyderabad, TN 500084</p>
+          <p>India</p>
+          <p class="mt-4">
+            <strong>Phone:</strong> <span>+91 91778 25388</span>
+          </p>
+          <p><strong>Email:</strong> <span>info@petacrate.com</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>
+        © <span>Copyright</span>
+        <strong class="px-1 sitename">Petacrate</strong>
+        <span>All Rights Reserved</span>
+      </p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/" style="color: #ffffff;">BootstrapMade</a> Illustration by <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA" style="color: #ffffff;"><p>Icons 8</a> from <a href="https://icons8.com/illustrations" style="color: #ffffff;">Ouch!</a>
+           </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
